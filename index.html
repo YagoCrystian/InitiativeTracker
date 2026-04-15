@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Initiative Tracker</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Initiative Tracker</h1>
+
+<div class="form">
+
+<input id="name" placeholder="Nome">
+
+<input id="initiative" type="number" placeholder="Iniciativa">
+
+<input id="hp" type="number" placeholder="HP atual">
+
+<input id="maxHp" type="number" placeholder="HP máximo">
+
+<select id="type">
+<option value="PLAYER">Player</option>
+<option value="MOB">Mob</option>
+<option value="SUMMON">Invocação</option>
+</select>
+
+<button onclick="addCombatant()">Adicionar</button>
+
+</div>
+
+<hr>
+
+<div class="turn-controls">
+
+<button onclick="resetInitiative()">Resetar</button>
+
+<button onclick="previousTurn()">Anterior</button>
+
+<button onclick="nextTurn()">Próximo</button>
+
+<button onclick="clearInitiative()">Limpar</button>
+
+<div id="round">Round: 1</div>
+
+</div>
+
+<hr>
+
+<div id="combatList"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

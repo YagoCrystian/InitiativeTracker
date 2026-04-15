@@ -1,0 +1,173 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background:#1e1e1e;
+color:white;
+padding:20px;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+}
+
+/* FORM */
+
+.form{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-bottom:15px;
+}
+
+input, select{
+padding:6px;
+border-radius:4px;
+border:none;
+}
+
+button{
+padding:6px 10px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+background:#444;
+color:white;
+transition:0.2s;
+}
+
+button:hover{
+background:#666;
+}
+
+/* TURN CONTROLS */
+
+.turn-controls{
+margin-bottom:10px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+#round{
+font-size:18px;
+font-weight:bold;
+margin-left:auto;
+}
+
+/* COMBATANT CARD */
+
+.combatant{
+background:#2a2a2a;
+border-radius:6px;
+padding:12px;
+margin-top:10px;
+border-left:6px solid gray;
+transition:0.2s;
+}
+
+/* ACTIVE TURN */
+
+.combatant.active{
+border:2px solid gold;
+background:#333;
+transform:scale(1.02);
+}
+
+/* TYPE COLORS */
+
+.combatant.player{
+border-left-color:#3498db;
+}
+
+.combatant.mob{
+border-left-color:#e74c3c;
+}
+
+.combatant.summon{
+border-left-color:#9b59b6;
+}
+
+/* TEXT INFO */
+
+.combatant strong{
+font-size:18px;
+display:block;
+margin-bottom:4px;
+}
+
+/* HP BAR */
+
+.hp-bar-container{
+width:100%;
+height:20px;
+background:#444;
+border-radius:4px;
+overflow:hidden;
+margin-top:6px;
+}
+
+.hp-bar{
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:12px;
+color:white;
+transition:width 0.3s;
+}
+
+.hp-fill {
+    height: 100%;
+    transition: width 0.4s ease;
+}
+
+/* BUTTONS */
+
+.combatant button{
+margin-top:6px;
+margin-right:6px;
+background:#555;
+}
+
+.combatant button:hover{
+background:#777;
+}
+
+@keyframes hpPulse {
+
+0%{
+filter:brightness(1);
+}
+
+50%{
+filter:brightness(1.4);
+}
+
+100%{
+filter:brightness(1);
+}
+
+}
+
+.combatant.active .hp-bar{
+
+animation:hpPulse 1.5s infinite;
+
+}
